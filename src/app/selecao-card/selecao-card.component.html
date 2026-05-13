@@ -1,0 +1,20 @@
+<div class="card">
+    <h2 class="titulo">{{ nome | uppercase }}</h2>
+
+    <img [src]="bandeira" [alt]="'Bandeira do ' + nome" class="bandeira">
+
+    <div class="placar">
+        <span class="gols-texto">Gols:</span>
+        <span class="gols-numero">{{ gols }}</span>
+    </div>
+
+    <button class="btn-gol" (click)="adicionarGol()">⚽ MARCAR GOL</button>
+
+    <hr>
+
+    <div class="torcida">
+        <label>Grito da Torcida:</label>
+        <input type="text" [(ngModel)]="gritoDeGuerra" placeholder="Grito...">
+        <p class="grito-exibicao">"{{ gritoDeGuerra }}"</p>
+    </div>
+</div>

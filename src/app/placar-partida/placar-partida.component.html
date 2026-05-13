@@ -1,0 +1,29 @@
+<div class="partida">
+
+    <h3 class="tituloPartida">{{nomeTimeA}} x {{nomeTimeB}}</h3>
+    <div class="placar">
+        <span>{{placarA}}</span>
+        <span>x</span>
+        <span>{{placarB}}</span>
+    </div>
+
+
+    <button *ngIf="(!JogoFinalizado)" class="btn-gol" (click)="AdicionarGol(1)">⚽ GOL: {{nomeTimeA}}</button>
+    <button *ngIf="(!JogoFinalizado)" class="btn-gol2" (click)="AdicionarGol(2)">⚽ GOL: {{nomeTimeB}}</button>
+    <hr>
+
+    <div class="jogo">
+        <label>Nome do time A:</label>
+        <input type="text" [(ngModel)]="nomeTimeA" placeholder="timeA">
+        
+        <label>Nome do time B:</label>
+        <input type="text" [(ngModel)]="nomeTimeB" placeholder="timeB">
+
+    </div>
+    <div class="botoes">
+        <button class="btn-finalizar" *ngIf="(!JogoFinalizado)" (click)="TerminoJogo()">Terminar Jogo</button>
+    </div>
+    <label *ngIf="(JogoFinalizado)">{{PlacarFinal(placarA, placarB)}}</label>
+    <button *ngIf="(JogoFinalizado)" class="btn-reset" (click)="ResetarJogo()">Resetar jogo</button>
+
+</div>

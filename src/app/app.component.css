@@ -1,0 +1,40 @@
+.dashboard-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabecalho {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cabecalho h1 {
+  font-size: 42px;
+  color: #333;
+}
+
+.placar-geral {
+  background-color: #f1c40f;
+  color: #2c3e50;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.placar-geral span {
+  font-size: 32px;
+  color: #e74c3c;
+  margin-left: 10px;
+}
+
+.campo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}

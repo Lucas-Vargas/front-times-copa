@@ -1,0 +1,28 @@
+<main class="dashboard-container">
+  
+  <header class="cabecalho">
+    <h1>🏆 {{ titulo }} 🏆</h1>
+    <div class="placar-geral">
+      TOTAL DE GOLS NA RODADA: <span>{{ totalGolsRodada }}</span>
+    </div>
+  </header>
+
+  <section class="campo">
+    <app-selecao-card 
+      *ngFor="let selecao of listaSelecoes"
+      [nome]="selecao.pais"
+      [bandeira]="selecao.flag"
+      (golMarcado)="atualizarPlacarGeral($event)">
+    </app-selecao-card>
+  <!-- <app-partida-card (golsPartidaMudaram)="totalGolsRodada = $event"></app-partida-card> -->
+  </section>
+
+  <section class="campo2">
+    <app-placar-partida
+    [nomeTimeA] = '"time A"'
+    [nomeTimeB] = '"time B"'
+    >
+    </app-placar-partida>
+  </section>
+
+</main>
